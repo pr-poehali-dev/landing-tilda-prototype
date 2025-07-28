@@ -1,20 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 220 27% 6%; /* #0A1120 tech-dark */
+    --foreground: 0 0% 100%; /* white text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 27% 8%; /* slightly lighter than bg */
+    --card-foreground: 0 0% 100%;
 
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 195 100% 50%; /* #00F5FF neon-cyan */
+    --primary-foreground: 220 27% 6%; /* tech-dark */
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -22,14 +24,14 @@
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 220 27% 6%; /* tech-dark */
+    --accent-foreground: 195 100% 50%; /* neon-cyan */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
+    --border: 195 100% 50%; /* neon-cyan borders */
+    --input: 220 27% 10%;
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
@@ -96,6 +98,15 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-tech-dark text-foreground font-sans;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-mono;
   }
 }
